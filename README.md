@@ -21,4 +21,4 @@ Musiques de Kevin MacLeod (incompetech.com, CC BY 4.0), pickentcode et omfgdude 
 Bruitages de will_leamon (OGA-BY 3.0), Ben Jaszczak & Brian Nelson, StarNinjas, Kenney et d'autres (CC0).
 Textures Poly Haven (CC0). Voir l'écran « Crédits » du jeu pour la liste complète.
 
-© Raphael — tous droits réservés sur le jeu.
+© licht — tous droits réservés sur le jeu.
