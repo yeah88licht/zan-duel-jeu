@@ -8,10 +8,10 @@ Mode histoire, arènes, personnalisation et multijoueur en ligne. **Gratuit.**
 👉 **https://yeah88licht.github.io/zan-duel-jeu/**
 
 Ou directement :
-- [Windows (zip)](https://github.com/yeah88licht/zan-duel-jeu/releases/latest/download/Zan-Duel-Windows.zip)
+- [Windows (installateur)](https://github.com/yeah88licht/zan-duel-jeu/releases/latest/download/Zan-Duel-Setup.exe)
 - [Linux (AppImage)](https://github.com/yeah88licht/zan-duel-jeu/releases/latest/download/Zan-Duel-Linux.AppImage)
 
-Le jeu se met à jour tout seul. Chaque mise à jour est signée numériquement : le jeu refuse tout fichier qui ne vient pas de son créateur.
+Le jeu se met à jour tout seul, en entier : chaque nouvelle version remplace l'ancienne. Chaque mise à jour est signée numériquement : le jeu refuse tout fichier qui ne vient pas de son créateur.
 
 Ce dépôt ne contient que la page de téléchargement et les fichiers d'installation, pas le code source du jeu.
 
