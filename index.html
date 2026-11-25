@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>斬 Zan Duel — duel au sabre</title>
+<meta name="description" content="Zan Duel : duel de samouraïs au katana, nerveux et stylé. Gratuit, pour Windows et Linux. Solo, mode histoire et multijoueur en ligne.">
+<meta property="og:title" content="斬 Zan Duel — duel au sabre">
+<meta property="og:description" content="Duel de samouraïs au katana. Gratuit, Windows et Linux, multijoueur en ligne.">
+<meta property="og:image" content="https://yeah88licht.github.io/zan-duel-jeu/images/bambou.jpg">
+<link rel="icon" href="images/icone.png">
+<style>
+  :root { --bg: #0b0710; --bg2: #140c1a; --ink: #f3e9d2; --mute: #bdb3a2; --red: #d8182c; --gold: #ffd24a; --line: #ffffff1f; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--gold); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header.hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden;
+    background: linear-gradient(180deg, #0b0710aa 0%, #0b0710 92%), url(images/fond.jpg) center 60%/cover no-repeat; }
+  .hero .wrap { display: grid; gap: 28px; padding-top: 60px; padding-bottom: 60px; }
+  .logo { display: flex; align-items: center; gap: 22px; }
+  .kanji { width: 118px; height: 118px; flex: none; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, var(--red) 58%, #8a0f1c 100%);
+    font: 900 76px/1 "Noto Serif CJK JP", "Yu Mincho", serif; color: #0b0710; box-shadow: 0 0 60px #d8182c66; }
+  h1 { margin: 0; font: 900 clamp(44px, 8vw, 84px)/1 Georgia, serif; letter-spacing: .12em; }
+  .tag { margin: 6px 0 0; letter-spacing: .4em; font-size: 13px; color: var(--mute); text-transform: uppercase; }
+  .pitch { max-width: 640px; font-size: clamp(17px, 2.2vw, 20px); color: var(--ink); margin: 0; }
+  .dl { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn { display: inline-flex; flex-direction: column; justify-content: center; min-width: 250px; padding: 16px 26px; border-radius: 4px; text-decoration: none;
+    border: 1px solid var(--line); background: #ffffff0d; color: var(--ink); transition: transform .15s, background .15s; }
+  .btn b { font: 700 18px Georgia, serif; letter-spacing: .08em; }
+  .btn small { color: var(--mute); font-size: 13px; }
+  .btn:hover { transform: translateY(-2px); background: #ffffff1a; }
+  .btn.main { background: var(--red); border-color: var(--red); }
+  .btn.main small { color: #ffe3e6; }
+  .btn.main:hover { background: #ee2238; }
+  .note { font-size: 13px; color: var(--mute); margin: 0; }
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  h2 { font: 700 clamp(26px, 4vw, 34px) Georgia, serif; letter-spacing: .1em; margin: 0 0 26px; }
+  h2::before { content: "— "; color: var(--red); }
+  .feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+  .feat { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--red); padding: 18px 20px; border-radius: 3px; }
+  .feat h3 { margin: 0 0 6px; font: 700 17px Georgia, serif; letter-spacing: .05em; }
+  .feat p { margin: 0; color: var(--mute); font-size: 15px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 14px; }
+  .shots img { width: 100%; display: block; border-radius: 3px; border: 1px solid var(--line); aspect-ratio: 16/8; object-fit: cover; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .card { background: var(--bg2); border: 1px solid var(--line); padding: 22px; border-radius: 3px; }
+  .card h3 { margin: 0 0 10px; font: 700 20px Georgia, serif; }
+  .card ol { margin: 0; padding-left: 20px; }
+  .card li { margin: 6px 0; }
+  code { background: #ffffff14; padding: 2px 6px; border-radius: 3px; font-size: 14px; word-break: break-all; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:first-child { white-space: nowrap; color: var(--gold); font-weight: 600; width: 1%; }
+  .credits p { margin: 0 0 8px; color: var(--mute); font-size: 14px; }
+  .credits b { color: var(--ink); }
+  footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--mute); font-size: 13px; }
+  @media (max-width: 560px) { .kanji { width: 84px; height: 84px; font-size: 54px; } .btn { min-width: 0; width: 100%; } td:first-child { white-space: normal; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="logo"><div class="kanji">斬</div><div><h1>ZAN DUEL</h1><p class="tag">Samouraï · Arène · Katana</p></div></div>
+    <p class="pitch">Un duel au sabre nerveux : enchaînements, esquives, courses sur les murs, parades au millimètre. Affronte sept maîtres en mode histoire ou défie tes amis en ligne.</p>
+    <div class="dl">
+      <a class="btn" id="b-win" href="https://github.com/yeah88licht/zan-duel-jeu/releases/latest/download/Zan-Duel-Windows.zip"><b>⬇ WINDOWS</b><small>Windows 10 / 11 · 64 bits · ~150 Mo</small></a>
+      <a class="btn" id="b-lin" href="https://github.com/yeah88licht/zan-duel-jeu/releases/latest/download/Zan-Duel-Linux.AppImage"><b>⬇ LINUX</b><small>AppImage · 64 bits · ~150 Mo</small></a>
+    </div>
+    <p class="note">Gratuit · pas de compte · se met à jour tout seul. <a href="#installer">Comment l'installer ?</a></p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>LE JEU</h2>
+    <div class="feats">
+      <div class="feat"><h3>Combat au sabre</h3><p>Enchaînements, coups lourds, envols, plongeons, garde, parades et contre-attaques kaeshi.</p></div>
+      <div class="feat"><h3>Mouvement libre</h3><p>Dash, double saut, course sur les murs : l'arène entière est ton terrain de jeu.</p></div>
+      <div class="feat"><h3>Mode histoire</h3><p>Sept chapitres, sept adversaires avec chacun sa technique, jusqu'au maître sans nom.</p></div>
+      <div class="feat"><h3>Multijoueur en ligne</h3><p>Crée un salon, donne le code à 4 lettres à ton ami, et que le meilleur gagne.</p></div>
+      <div class="feat"><h3>Six arènes</h3><p>Dojo au crépuscule, toits d'Edo, bambouseraie, pont sous la pluie, temple enneigé, port de nuit.</p></div>
+      <div class="feat"><h3>Ton samouraï</h3><p>Sabres, tenues, couleurs, silhouettes : personnalise ton combattant au casier.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>EN IMAGES</h2>
+    <div class="shots">
+      <img src="images/bambou.jpg" alt="Combat dans la bambouseraie" loading="lazy">
+      <img src="images/port.jpg" alt="Duel de nuit sur le port" loading="lazy">
+      <img src="images/neige.jpg" alt="Écran de présentation avant un duel au temple enneigé" loading="lazy">
+      <img src="images/dojo.jpg" alt="Le dojo au crépuscule" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="installer">
+  <div class="wrap">
+    <h2>INSTALLER</h2>
+    <div class="steps">
+      <div class="card">
+        <h3>Windows</h3>
+        <ol>
+          <li>Télécharge <b>Zan-Duel-Windows.zip</b>.</li>
+          <li>Clic droit sur le fichier → <b>Extraire tout…</b></li>
+          <li>Dans le dossier extrait, lance <b>Zan Duel.exe</b>.</li>
+          <li>Si Windows affiche « Windows a protégé votre ordinateur » : clique sur <b>Informations complémentaires</b> puis <b>Exécuter quand même</b>. C'est normal pour un petit jeu indépendant qui n'a pas de certificat payant.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Linux</h3>
+        <ol>
+          <li>Télécharge <b>Zan-Duel-Linux.AppImage</b>.</li>
+          <li>Rends-le exécutable : clic droit → Propriétés → « Autoriser l'exécution », ou dans un terminal :<br><code>chmod +x Zan-Duel-Linux.AppImage</code></li>
+          <li>Double-clique dessus pour jouer.</li>
+          <li>Si rien ne se passe (erreur « FUSE ») : <code>sudo apt install libfuse2t64</code> (ou <code>libfuse2</code> sur les anciennes versions).</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note" style="margin-top:18px">Les mises à jour s'installent toutes seules : un bandeau « Redémarrer le jeu » apparaît quand une nouvelle version est prête. Chaque mise à jour est signée numériquement ; le jeu refuse tout fichier qui ne vient pas de son créateur.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>COMMANDES</h2>
+    <table>
+      <tr><td>Z Q S D</td><td>Se déplacer (modifiable dans les options)</td></tr>
+      <tr><td>Espace</td><td>Sauter (deux fois pour un double saut, contre un mur pour courir dessus)</td></tr>
+      <tr><td>Maj</td><td>Dash</td></tr>
+      <tr><td>Clic gauche</td><td>Enchaînement · avec S : envol · en l'air vers l'avant : plongeon tsubame</td></tr>
+      <tr><td>Clic droit</td><td>Garde · au bon moment : parade</td></tr>
+      <tr><td>F</td><td>Coup de pied · en l'air : plongeon · en garde : contre kaeshi</td></tr>
+      <tr><td>A · R</td><td>Kiai (onde de choc) · Ultime quand la jauge de ki est pleine</td></tr>
+      <tr><td>Échap · F11</td><td>Pause · plein écran</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap credits">
+    <h2>CRÉDITS</h2>
+    <p><b>Création :</b> Raphael. Moteur 3D three.js (MIT), application Electron (MIT).</p>
+    <p><b>Musiques :</b> « Big Mojo » et « Ishikari Lore » — Kevin MacLeod (incompetech.com), licence <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · pickentcode et omfgdude — CC0.</p>
+    <p><b>Bruitages :</b> « Fleshy Fight Sounds » — will_leamon, licence OGA-BY 3.0 · « Medieval sound effects – Weapon impacts » — Ben Jaszczak &amp; Brian Nelson, CC0 · StarNinjas, Kenney, artisticdude, pyranostudios, qubodup, EZduzziteh, Marwan Antonios — CC0 (via <a href="https://opengameart.org">OpenGameArt</a>).</p>
+    <p><b>Graphismes :</b> textures <a href="https://polyhaven.com">Poly Haven</a> (CC0), animations Mixamo.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">斬 Zan Duel · jeu gratuit · © Raphael. Tous droits réservés sur le jeu ; les contenus tiers restent sous leurs licences respectives.</div>
+</footer>
+
+<script>
+  // met en avant le bouton du système de la personne qui visite
+  (function () {
+    var ua = navigator.userAgent || '', win = /Windows/i.test(ua), lin = /Linux/i.test(ua) && !/Android/i.test(ua);
+    var b = document.getElementById(lin && !win ? 'b-lin' : 'b-win');
+    b.classList.add('main'); if (b.id === 'b-lin') b.parentNode.insertBefore(b, b.parentNode.firstChild);
+  })();
+</script>
+</body>
+</html>
