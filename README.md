@@ -19,6 +19,6 @@ Ce dépôt ne contient que la page de téléchargement et les fichiers d'install
 
 Musiques de Kevin MacLeod (incompetech.com, CC BY 4.0), pickentcode et omfgdude (CC0).
 Bruitages de will_leamon (OGA-BY 3.0), Ben Jaszczak & Brian Nelson, StarNinjas, Kenney et d'autres (CC0).
-Textures Poly Haven (CC0). Voir l'écran « Crédits » du jeu pour la liste complète.
+Textures Poly Haven (CC0), peau des personnages MakeHuman (CC0). Voir l'écran « Crédits » du jeu pour la liste complète.
 
 © licht — tous droits réservés sur le jeu.
